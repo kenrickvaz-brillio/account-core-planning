@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, BrainCircuit, LineChart, Target, AlertTriangle, CheckCircle2, X } from 'lucide-react';
-import { cn } from '../../lib/utils';
+import { motion } from 'framer-motion';
+import { Sparkles, BrainCircuit, Target, AlertTriangle, CheckCircle2, X } from 'lucide-react';
 
 interface AISprintIntelligenceModalProps {
     isOpen: boolean;

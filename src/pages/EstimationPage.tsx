@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useStore } from '../hooks/useStore';
 import { Story } from '../types';
 import { cn, formatConfidence } from '../lib/utils';
-import { Play, Check, AlertTriangle, Lightbulb, ChevronRight, Calculator, RefreshCw } from 'lucide-react';
+import { Check, AlertTriangle, Lightbulb, ChevronRight, Calculator } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const EstimationPage: React.FC = () => {

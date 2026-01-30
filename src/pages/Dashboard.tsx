@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useStore } from '../hooks/useStore';
 import VelocityChart from '../components/dashboard/VelocityChart';
 import KPIStats from '../components/dashboard/KPIStats';
-import { Download, Calculator, CheckCircle2, ArrowRight, Clock, Target, AlertTriangle, BrainCircuit, Sparkles } from 'lucide-react';
-import { AISprintIntelligenceModal } from '../components/premium/AISprintIntelligenceModal'; // Added import
-import { motion } from 'framer-motion';
+import { CheckCircle2, Clock, Target, AlertTriangle, BrainCircuit, Sparkles } from 'lucide-react';
+import { AISprintIntelligenceModal } from '../components/premium/AISprintIntelligenceModal';
 
 const Dashboard: React.FC = () => {
     const { state } = useStore();
@@ -115,17 +114,6 @@ const CheckItem = ({ label, checked }: { label: string, checked: boolean }) => (
     </div>
 );
 
-const ActionItem = ({ icon, title, desc, onClick }: any) => (
-    <button onClick={onClick} className="w-full flex items-center gap-4 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 border border-white/5 transition-all group text-left">
-        <div className="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            {icon}
-        </div>
-        <div>
-            <h4 className="font-medium text-sm">{title}</h4>
-            <p className="text-xs text-muted-foreground">{desc}</p>
-        </div>
-        <ArrowRight size={16} className="ml-auto text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-    </button>
-);
+
 
 export default Dashboard;

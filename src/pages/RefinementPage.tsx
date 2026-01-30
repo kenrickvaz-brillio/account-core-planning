@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { useStore } from '../hooks/useStore';
 import { SplitStoryWizard } from '../components/refinement/SplitStoryWizard';
 import { Story } from '../types';
-import { Scissors, Wand2, ArrowRight } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { Scissors, Wand2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const RefinementPage: React.FC = () => {

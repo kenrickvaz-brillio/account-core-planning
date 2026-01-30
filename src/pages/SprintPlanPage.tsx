@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { useStore } from '../hooks/useStore';
 import { Story } from '../types';
 import { cn } from '../lib/utils';
@@ -119,7 +119,7 @@ const SprintPlanPage: React.FC = () => {
                                     </div>
 
                                     <div className="flex items-center gap-4 text-sm text-muted-foreground mr-4">
-                                        <span>{story.assignee || 'Unassigned'}</span>
+                                        <span>{story.assignee?.name || 'Unassigned'}</span>
                                         <span className="w-px h-4 bg-white/10" />
                                         <span>{story.component}</span>
                                     </div>

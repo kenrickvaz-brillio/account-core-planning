@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Story } from '../../types';
-import { Layers, ArrowRight, scissors, CheckCircle2 } from 'lucide-react';
+import { Layers, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface SplitStoryWizardProps {
@@ -10,7 +10,7 @@ interface SplitStoryWizardProps {
 }
 
 export const SplitStoryWizard: React.FC<SplitStoryWizardProps> = ({ story, onSplit, onCancel }) => {
-    const [step, setStep] = useState(1);
+    // const [step, setStep] = useState(1);
 
     // Mock AI generated splits
     const subStories: Story[] = [

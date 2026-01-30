@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { useStore } from '../hooks/useStore';
 import { AI_LOGIC } from '../lib/ai-logic';
-import { ValidationIssue } from '../types';
 import { AlertCircle, CheckCircle2, ShieldAlert, BadgeCheck } from 'lucide-react';
 
 const ValidationPage: React.FC = () => {

@@ -1,9 +1,9 @@
 import React, { createContext, useReducer } from 'react';
-import { Project, Epic, Story, User, SprintSettings, ValidationIssue } from '../types';
+import { Project, Epic, Story, User, SprintSettings } from '../types';
 import { MOCK_EPICS, CURRENT_PROJECT, MOCK_USERS, MOCK_SPRINT_SETTINGS, MOCK_STORIES } from '../data/mockData';
 import { AI_LOGIC } from '../lib/ai-logic';
 
-interface State {
+export interface State {
     project: Project;
     epics: Epic[];
     users: User[];
@@ -39,7 +39,7 @@ const initialState: State = {
     sprintRiskLoad: 0
 };
 
-type Action =
+export type Action =
     | { type: 'IMPORT_STORIES'; storyIds: string[] }
     | { type: 'ESTIMATE_STORY'; storyId: string }
     | { type: 'ESTIMATE_ALL_CANDIDATES' }

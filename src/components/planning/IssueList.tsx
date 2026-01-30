@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Epic } from '../../types';
-import { BadgeCheck, AlertCircle, Circle, ArrowUpCircle, Clock } from 'lucide-react';
+import { BadgeCheck, AlertCircle, Circle, ArrowUpCircle } from 'lucide-react';
 import { cn } from '../../lib/utils'; // Assumes cn is in lib/utils
 
 interface IssueListProps {
@@ -10,7 +10,7 @@ interface IssueListProps {
     epics: Epic[];
 }
 
-export const IssueList: React.FC<IssueListProps> = ({ stories, selectedIds, onToggleSelect, epics }) => {
+export const IssueList: React.FC<IssueListProps> = ({ stories, selectedIds, onToggleSelect }) => {
     if (stories.length === 0) {
         return (
             <div className="flex flex-col items-center justify-center p-12 text-muted-foreground bg-secondary/10 rounded-xl border border-dashed border-white/10">
@@ -24,15 +24,9 @@ export const IssueList: React.FC<IssueListProps> = ({ stories, selectedIds, onTo
         <div className="space-y-3">
             {stories.map(story => {
                 const isSelected = selectedIds.includes(story.id);
-                const epic = epics.find(e => {
-                    // Mock logic to find epic, usually story has epicId, 
-                    // but for this mock let's infer or just pick one based on id hash or something distinct?
-                    // Actually, let's just use the first epic for now/demo or add epicId to story type.
-                    // For now, I'll just skip epic badge effectively or rely on a "mock" mapping if needed.
-                    // Wait, I defined mock data but didn't link stories to epics explicitly in the Type.
-                    // Let's assume we don't show Epic badge here for now to save complexity, or just show component.
-                    return false;
-                });
+                // const epic = epics.find(e => {
+                //     return e.id === story.epicId;
+                // });
 
                 return (
                     <div

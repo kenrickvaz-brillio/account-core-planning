@@ -95,7 +95,7 @@ export const MOCK_STORIES: Story[] = [
         ],
         dependencies: [{ id: 'Ext-Kafka', type: 'internal', description: 'Kafka topic must be created' }],
         unknowns: [],
-        riskTags: [{ id: 'R3', type: 'compliance', label: 'GDPR', severity: 'high' }],
+        riskTags: [{ id: 'R3', type: 'security', label: 'GDPR Compliance', severity: 'high' }],
         historicalSignals: { prSizeHint: 'medium', touchedModulesCount: 4, requiresE2E: true },
         status: 'Candidate', confidenceScore: 85, aiReasoning: []
     },
