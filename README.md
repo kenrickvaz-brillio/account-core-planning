@@ -2,6 +2,8 @@
 
 A premium, frontend-only demonstration of an AI-powered sprint planning workflow. This application simulates a deterministic AI agent that assists engineering teams in estimating, refining, and planning sprints.
 
+**[View Live Demo](https://ashy-smoke-00440681e.1.azurestaticapps.net/)**
+
 ## Features
 
 ### 1. Dashboard & Velocity Tracking

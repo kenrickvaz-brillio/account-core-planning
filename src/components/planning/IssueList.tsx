@@ -58,7 +58,7 @@ export const IssueList: React.FC<IssueListProps> = ({ stories, selectedIds, onTo
                                     {story.component}
                                 </span>
                             </div>
-                            <h4 className={cn("font-medium text-sm", isSelected ? "text-indigo-100" : "text-foreground")}>
+                            <h4 className={cn("font-medium text-sm", isSelected ? "text-indigo-700 dark:text-indigo-100" : "text-foreground")}>
                                 {story.title}
                             </h4>
                             <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
@@ -97,10 +97,10 @@ export const IssueList: React.FC<IssueListProps> = ({ stories, selectedIds, onTo
 
 const PriorityBadge = ({ priority }: { priority: string }) => {
     const color = {
-        'Critical': 'text-red-400 bg-red-400/10 border-red-400/20',
-        'High': 'text-orange-400 bg-orange-400/10 border-orange-400/20',
-        'Medium': 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
-        'Low': 'text-blue-400 bg-blue-400/10 border-blue-400/20',
+        'Critical': 'text-red-700 dark:text-red-400 bg-red-100 dark:bg-red-400/10 border-red-200 dark:border-red-400/20',
+        'High': 'text-orange-700 dark:text-orange-400 bg-orange-100 dark:bg-orange-400/10 border-orange-200 dark:border-orange-400/20',
+        'Medium': 'text-yellow-700 dark:text-yellow-400 bg-yellow-100 dark:bg-yellow-400/10 border-yellow-200 dark:border-yellow-400/20',
+        'Low': 'text-blue-700 dark:text-blue-400 bg-blue-100 dark:bg-blue-400/10 border-blue-200 dark:border-blue-400/20',
     }[priority] || 'text-muted-foreground';
 
     return (
